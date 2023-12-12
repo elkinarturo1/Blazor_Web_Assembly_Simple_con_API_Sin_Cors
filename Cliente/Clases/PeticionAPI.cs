@@ -11,7 +11,7 @@ namespace Cliente.Clases
         public PeticionAPI()
         {
             _httpClient = new HttpClient();
-            _httpClient.BaseAddress = new Uri("https://localhost:7082/");
+            _httpClient.BaseAddress = new Uri("https://107.6.54.20:9093/");
         }
 
         public async Task<ResultadoModel> ConsumirGet()

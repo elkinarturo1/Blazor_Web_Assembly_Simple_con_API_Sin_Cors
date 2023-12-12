@@ -1,9 +1,7 @@
-﻿using System.Runtime.CompilerServices;
-
-namespace APITest_Sin_Cors
+﻿namespace APITest_Sin_Cors
 {
     public class ResultadoModel
     {
-        public string detaill {  get; set; } 
+        public string detaill { get; set; }
     }
 }

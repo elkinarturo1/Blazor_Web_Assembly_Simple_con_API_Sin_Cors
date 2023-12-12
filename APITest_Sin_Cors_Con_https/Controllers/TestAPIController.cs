@@ -7,11 +7,11 @@ namespace APITest_Sin_Cors.Controllers
     [ApiController]
     public class TestAPIController : ControllerBase
     {
+
         ResultadoModel resultadoModel = new ResultadoModel();
 
-        [HttpGet]
-        public IActionResult Get()
-        {
+        [HttpGet] 
+        public IActionResult Get() {
 
             resultadoModel.detaill = "api funcionando correctamente";
             return Ok(resultadoModel);
