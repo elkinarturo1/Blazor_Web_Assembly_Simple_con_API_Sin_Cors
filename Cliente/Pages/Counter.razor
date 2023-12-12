@@ -1,0 +1,31 @@
+﻿@page "/counter"
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @currentCount</p>
+<p role="status">Resultado: @resultadoModel.detaill</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    private int currentCount = 0;
+    ResultadoModel resultadoModel = new ResultadoModel();
+
+    private async Task IncrementCount()
+    {
+        currentCount++;
+        PeticionAPI peticionAPI = new PeticionAPI();
+
+        try
+        {
+            resultadoModel = await peticionAPI.ConsumirGet();
+        }
+        catch (Exception ex)
+        {
+            resultadoModel.detaill = ex.Message;
+        }
+
+    }
+}
